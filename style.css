@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+:root {
+    --font:'Open Sans', sans-serif;
+}
+body{
+    background-color: rgb(41, 40, 40);
+    font-family: var(--font);
+}
+
+.para-list{
+    color: white;
+}
+
+.task-list{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+
+.task-list li button{
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 9px;
+    background: #282829;
+    box-shadow:  5px 5px 5px #1e1e1f,
+             -5px -5px 5px #323233;
+
+}
+
+.task-list li button:hover {
+    color: blue;
+    transition: 0.5s;
+}
+
+.task-list li {
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.task-link{
+    text-decoration: none;
+    color: white;
+}
