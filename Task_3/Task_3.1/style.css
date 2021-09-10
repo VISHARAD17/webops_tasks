@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+:root{
+    -red: hsl(7, 99%, 70%);
+    --change_yellow: hsl(51, 100%, 49%);
+    --primary-dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark_blue: hsl(198, 62%, 26%);
+    --dark_cyan: hsl(168, 34%, 41%);
+
+    --neutral_color: hsl(212, 27%, 19%);
+    --neutral-vdark-grayish-blue: hsl(213, 9%, 39%);
+    --neutral-dark-grayish-blue: hsl(232, 10%, 55%);
+    --neutral-grayish-blue: hsl(210, 4%, 67%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body{
+    font-size: 18px;
+}
+.Barlow{
+    font-family: 'Barlow', sans-serif;
+}
+.Fraunces{
+    font-family: 'Fraunces', serif;
+}
+.learn-more{
+    color: unset;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.learn-more:hover{
+    color: unset;
+}
+.ly::after{
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: var(--change_yellow);
+    border: 5px solid var(--change_yellow);
+    border-radius: 4px;
+    z-index: -1;
+    opacity: 25%;
+}
+.ly:hover::after{
+    opacity: 100%;
+}
+.lr::after{
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: var(-red);
+    border: 5px solid var(-red);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 25%;
+}
+.lr:hover::after{
+    opacity: 100%;
+}
+.contact{
+    background-color: var(--neutral-white);
+}
+.contact:hover{
+    color: var(--neutral-white);
+    background-color: rgba(256,256,256, 40%);
+}
+.ftr{
+    cursor: pointer;
+}
+.ftr:hover{
+    color: #fff;
+}
+.c-svg{
+    transform: scale(1.15);
+}
+.c-svg:hover{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(97deg) brightness(1000%) contrast(1000%);
+    cursor: pointer;
+}
+#header-logo{
+    transform: scale(1.5);
+}
+#footer-logo{
+    transform: scale(1.5);
+}
+.overlay-content{
+    position: absolute;
+    top: 65%;
+    width: 50%;
+    left: 25%; 
+}
+#hero{
+    height: 120vh;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.col-content{
+    width: 67%;
+}
+.nav-i{
+    color: var(--neutral-white);
+    cursor: pointer;
+}
+.nav-link:hover, .nav-link:focus{
+    color: var(--neutral-white);
+}
+
+
+@media only screen and (max-width: 1220px) {
+    * {
+        font-size: 14px;
+    }
+    #header-logo{
+        transform: scale(1.2);
+    }
+    #footer-logo{
+        transform: scale(1.2);
+    }
+    .overlay-content{
+        width: 80%;
+        left: 10%;
+    }
+    #hero{
+        height: 100vh;
+    }
+    .c-svg{
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    * {
+        font-size: 12px;
+    }
+    #header-logo{
+        transform: scale(1);
+    }
+    #footer-logo{
+        transform: scale(1);
+    }
+    .overlay-content{
+        width: 85%;
+        left: 7.5%;
+    }
+    #hero{
+        height: 80vh;
+    }
+    .c-svg{
+        transform: scale(0.9);
+    }
+}
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 12px;
+    }
+    #header-logo{
+        transform: scale(0.9);
+        margin: 0 !important;
+    }
+    #footer-logo{
+        transform: scale(0.9);
+    }
+    .overlay-content{
+        width: 90%;
+        left: 5%;
+    }
+    #hero{
+        height: 75vh;
+    }
+    .col-content{
+        width: 80%;
+        padding-block: 15%;
+    }
+
+    .col-content *{
+        text-align: center;
+    }
+
+    .c-svg{
+        transform: scale(0.85);
+    }
+    .nav-link{
+        margin: 0 !important;
+        font-size: 13px;
+    }
+    .nav-item{
+        margin: 0 !important;
+        font-size: 13px;
+        padding-block: 0.5em;
+    }
+    .nav-i{
+        color: var(--neutral-dark-grayish-blue) !important;
+    }
+    .contact{
+        background-color: var(--change_yellow);
+    }
+    .navbar-nav{
+        background-color: var(--neutral-white);
+        margin-top: 2.5em;
+        padding-bottom: 1em;
+        position: absolute;
+        width: 96%;
+        z-index: 1000;
+    }
+    .navbar-nav::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -20px;
+        border: 20px solid transparent;
+        border-right-color: white;
+    }
+    .ftr:hover{
+        color: inherit;
+    }
+    .c-svg:hover{
+        filter: unset;
+    cursor: pointer;
+        }
+    .contact:hover{
+        color: inherit;
+        background-color: var(--change_yellow);
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    * {
+        font-size: 11px;
+    }
+    #header-logo{
+        transform: scale(0.8);
+        margin: 0 !important;
+    }
+    #footer-logo{
+        transform: scale(0.8);
+    }
+    .overlay-content{
+        width: 90%;
+        left: 5%;
+    }
+    #hero{
+        background-image: url(./images/mobile/image-header.jpg);
+        height: 75vh;
+    }
+    .col-content{
+        width: 80%;
+        padding-block: 15%;
+    }
+
+    .col-content{
+        text-align: center;
+    }
+    .c-svg{
+        transform: scale(0.8);
+    }
+    .nav-link{
+        margin: 0 !important;
+        font-size: 13px;
+    }
+    .nav-item{
+        margin: 0 !important;
+        font-size: 13px;
+        padding-block: 0.5em;
+    }
+    .nav-i{
+        color: var(--neutral-dark-grayish-blue) !important;
+    }
+    .contact{
+    background-color: var(--change_yellow);
+    }
+    .navbar-nav{
+        background-color: var(--neutral-white);
+        margin-top: 2.5em;
+        padding-bottom: 1em;
+        position: absolute;
+        width: 93.5%;
+    }
+    .navbar-nav::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -20px;
+        border: 20px solid transparent;
+        border-right-color: white;
+    }
+}
+
+
